@@ -4,7 +4,9 @@ function TodoList(props) {
     return (
         <div className="todo-container">
             <ul className="todo-list">
-            <Todo/>
+            {props.todosList.map(todo => (
+                <Todo/>
+            ))}
             </ul>
         </div>
     );

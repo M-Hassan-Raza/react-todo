@@ -17,8 +17,8 @@ function Form(props) {
     };
     return (
         <form>
-            <input onChange={inputTextHandler} type="text" className="todo-input" placeholder="TODO Item"/>
-            <input onChange={inputPriorityHandler} type="number" min="1" max="5" className="todo-input priority" placeholder="Priority"/>
+            <input onChange={inputTextHandler} type="text" className="todo-input" placeholder="What is the task today?"/>
+            <input onChange={inputPriorityHandler} type="number" min="1" max="5" className="todo-input priority" placeholder="How important it is?"/>
             <button onClick={submitHandler} className="todo-button" type="submit">
                 <i className="fas fa-check"></i>
             </button>
