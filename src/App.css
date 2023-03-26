@@ -132,3 +132,10 @@ select {
   cursor: pointer;
   pointer-events: none;
 }
+
+::placeholder{
+  font-size: 15px;
+  color: rgba(148,187,233,1);
+  font-weight: bold;
+  opacity: 0.5;
+}
