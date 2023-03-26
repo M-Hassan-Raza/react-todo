@@ -1,9 +1,11 @@
 import React from "react";
-
-function TodoList() {
+import Todo from './Todo'
+function TodoList(props) {
     return (
         <div className="todo-container">
-            <ul className="todo-list"></ul>
+            <ul className="todo-list">
+            <Todo/>
+            </ul>
         </div>
     );
 }

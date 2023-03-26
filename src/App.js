@@ -20,7 +20,10 @@ function App() {
         priority={priority}
         setPriority={setPriority}
       />
-      <TodoList />
+      <TodoList 
+      todosList={todosList}
+      priority={priority}
+      />
     </div>
   );
 }

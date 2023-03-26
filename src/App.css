@@ -54,7 +54,7 @@ form button:hover {
   font-size: 1.5rem;
   color: black;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   transition: all 1s ease;
 }
@@ -63,9 +63,10 @@ form button:hover {
 }
 .todo li {
   flex: 1;
+  list-style: none;
 }
 
-.trash-btn,
+.delete-btn,
 .complete-btn {
   background: #ff6f47;
   color: white;
@@ -137,5 +138,5 @@ select {
   font-size: 15px;
   color: rgba(148,187,233,1);
   font-weight: bold;
-  opacity: 0.5;
+  opacity: 0.8;
 }
