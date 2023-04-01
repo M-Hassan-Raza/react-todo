@@ -1,12 +1,17 @@
 import React from "react";
 
-function Todo() {
+function Todo(props) {
+    const deleteHandler = () => {
+
+    }
     return (
         <div className="todo">
-            <li className="todo-item">Hi</li>
-            <li className="todo-item-priority">5</li>
-            <button className="complete-btn"><i className="fas fa-thumbs-up"></i></button>
-            <button className="delete-btn"><i className="fas fa-trash"></i></button>
+            <li className="todo-item">{props.text}</li>
+            <li className="todo-item-priority">{props.priority}</li>
+            <button className="complete-btn">
+                <i className="fa-light fa-pen-to-square"></i>
+            </button>
+            <button onClick={deleteHandler} className="delete-btn"><i className="fas fa-trash"></i></button>
         </div>
     );
 }

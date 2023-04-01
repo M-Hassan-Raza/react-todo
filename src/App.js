@@ -7,10 +7,11 @@ function App() {
   const [inputText, setInputText] = useState("");
   const [todosList, setTodosList] = useState([]);
   const [priority, setPriority] = useState("");
+  const [prioritiesList, setPrioritiesList] = useState([]);
   return (
     <div className="App">
       <header>
-        <h1>Rai's TODO List</h1>
+        <h1>TODO List 🤡</h1>
       </header>
       <Form
         todosList={todosList}
@@ -19,10 +20,12 @@ function App() {
         inputText={inputText}
         priority={priority}
         setPriority={setPriority}
+        prioritiesList={prioritiesList}
+        setPrioritiesList={setPrioritiesList}
       />
-      <TodoList 
-      todosList={todosList}
-      priority={priority}
+      <TodoList
+        todosList={todosList}
+        setTodosList={setTodosList}
       />
     </div>
   );
