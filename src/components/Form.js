@@ -22,7 +22,7 @@ function Form(props) {
     return (
         <form>
             <input onChange={inputTextHandler} value={props.inputText} type="text" className="todo-input" placeholder="What is the task today?"/>
-            <input onChange={inputPriorityHandler} value={props.priority} type="number" min="1" max="5" className="todo-input priority" placeholder="How important it is?"/>
+            <input onChange={inputPriorityHandler} value={props.priority} type="number" min="1" max="5" className="priority" placeholder="How important it is?"/>
             <button onClick={submitHandler} className="todo-button" type="submit">
             <i className="fa-sharp fa-solid fa-check"></i>
             </button>

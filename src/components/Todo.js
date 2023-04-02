@@ -2,7 +2,7 @@ import React from "react";
 
 function Todo(props) {
     const deleteHandler = () => {
-
+        props.setTodosList(props.todosList.filter((el) => el.id !== props.todo.id));
     }
     return (
         <div className="todo">

@@ -10,6 +10,7 @@ function TodoList(props) {
                         setTodosList={props.setTodosList}
                         key={todo.id}
                         text={todo.text}
+                        todo={todo}
                         priority={todo.priority}
                     />
                 ))}
