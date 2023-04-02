@@ -1,4 +1,6 @@
 import React from "react";
+import {v4 as uuidv4} from 'uuid';
+uuidv4();
 
 function Form(props) {
     const inputTextHandler = (e) => {
@@ -11,7 +13,7 @@ function Form(props) {
         e.preventDefault();
         props.setTodosList([
             ...props.todosList,
-            { text: props.inputText, completed: false, id: parseInt(Math.random() * 1000), priority: props.priority }
+            { text: props.inputText, completed: false, id: uuidv4(), priority: props.priority, isEditing: false }
         ]);
         props.setPrioritiesList([
             ...props.prioritiesList,
