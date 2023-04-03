@@ -15,7 +15,9 @@ function Todo(props) {
 
     const moveToTopHandler = (id) => {
         var index = props.todosList.map(function (x) { return x.id; }).indexOf(id);
-        props.setTodosList(props.todosList.unshift(props.todosList.splice(index, 1)[0]));
+        const features = [...props.todosList];
+        features.unshift(features.splice(index, 1)[0])
+        props.setTodosList([...features]);
     }
 
     return (
