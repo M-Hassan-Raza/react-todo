@@ -12,7 +12,6 @@ function Todo(props) {
     }
 
     const handlePriorityChange = (id, imp) => {
-        console.log(imp);
         var index = props.todosList.map(function (x) { return x.id; }).indexOf(id);
         const features = [...props.todosList];
         features[index].priority = imp;
@@ -33,10 +32,10 @@ function Todo(props) {
             <button onClick={() => moveToTopHandler(props.todo.id)} className="top-btn" title="Move to the Top">
                 <FontAwesomeIcon icon={faArrowUp} />
             </button>
-            <button className="edit-btn increase" onClick={() => handlePriorityChange(props.todo.id, props.todo.priority + 1)} title="Increase Priority">
+            <button className="edit-btn increase" onClick={() => handlePriorityChange(props.todo.id, parseInt(props.todo.priority) + 1)} title="Increase Priority">
                 <FontAwesomeIcon icon={faPlus} />
             </button>
-            <button className="edit-btn decrease" onClick={() => handlePriorityChange(props.todo.id, props.todo.priority - 1)} title="Decrease Priority">
+            <button className="edit-btn decrease" onClick={() => handlePriorityChange(props.todo.id, parseInt(props.todo.priority) - 1)} title="Decrease Priority">
                 <FontAwesomeIcon icon={faMinus} />
             </button>
             <button onClick={deleteHandler} className="delete-btn" title="Delete">
