@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>TODO List 🤡</h1>
+        <h1>Rai's Todo App</h1>
       </header>
       <Form
         todosList={todosList}
