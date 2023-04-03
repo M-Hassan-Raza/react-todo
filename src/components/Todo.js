@@ -3,13 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faMinus } from '@fortawesome/free-solid-svg-icons';
 
 function Todo(props) {
     const deleteHandler = () => {
         props.setTodosList(props.todosList.filter((el) => el.id !== props.todo.id));
     }
 
-    const editHandler = (id) => {
+    const increasePriority = (id) => {
+
+    }
+
+    const decreasePriority = (id) => {
 
     }
 
@@ -27,8 +33,11 @@ function Todo(props) {
             <button onClick={() => moveToTopHandler(props.todo.id)} className="top-btn" title="Move to the Top">
                 <FontAwesomeIcon icon={faArrowUp} />
             </button>
-            <button className="edit-btn" onClick={() => editHandler(props.todo.id)} title="Edit">
-                <FontAwesomeIcon icon={faPenToSquare} />
+            <button className="edit-btn increase" onClick={() => increasePriority(props.todo.id, props.todo.priority + 1)} title="Increase Priority">
+                <FontAwesomeIcon icon={faPlus} />
+            </button>
+            <button className="edit-btn decrease" onClick={() => decreasePriority(props.todo.id, props.todo.priority - 1)} title="Decrease Priority">
+                <FontAwesomeIcon icon={faMinus} />
             </button>
             <button onClick={deleteHandler} className="delete-btn" title="Delete">
                 <FontAwesomeIcon icon={faTrash} />
