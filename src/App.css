@@ -70,18 +70,49 @@ form button:hover {
   width: 200px;
 }
 
-.delete-btn,
-.complete-btn {
-  background: #ff6f47;
+.delete-btn{
+  background: #fd0a0a;
   color: white;
   border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
 }
-.complete-btn {
-  background: rgb(11, 212, 162);
+
+.edit-btn{
+  background: #2cc0c5;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
 }
+
+.top-btn {
+  background: #05eea5;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.delete-btn:hover
+{
+  color: #fd0a0a;
+  background-color: white;
+}
+
+.edit-btn:hover{
+  color: #2cc0c5;
+  background-color: white;
+}
+
+.top-btn:hover{
+  color: #05eea5;
+  background-color: rgb(92, 89, 89);
+}
+
 
 .todo-item {
   padding: 0rem 0.5rem;
@@ -124,13 +155,14 @@ form button:hover {
 }
 
 input {
-  text-align: center;
+  padding: 5px;
+  align-content: center;
 }
 
-::-webkit-input-placeholder {
+/* ::-webkit-input-placeholder {
   text-align: center;
 }
 
 :-moz-placeholder {
   text-align: center;
-}
+} */

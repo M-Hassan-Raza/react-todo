@@ -1,4 +1,8 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 function Todo(props) {
     const deleteHandler = () => {
@@ -8,14 +12,14 @@ function Todo(props) {
         <div className="todo">
             <li className="todo-item">{props.text}</li>
             <li className="todo-item-priority">{props.priority}</li>
-            <button className="edit-btn">
-                <i className="fa-light fa-pen-to-square"></i>
+            <button className="top-btn" title="Delete Item">
+                <FontAwesomeIcon icon={faArrowUp} />
             </button>
-            <button className="top-btn">
-                <i className="fa-light fa-pen-to-square"></i>
-            </button> 
+            <button className="edit-btn">
+                <FontAwesomeIcon icon={faPenToSquare} />
+            </button>
             <button onClick={deleteHandler} className="delete-btn">
-                <i className="fas fa-trash"></i>
+            <FontAwesomeIcon icon={faTrash} />
             </button>
         </div>
     );
