@@ -12,10 +12,12 @@ function Todo(props) {
     }
 
     const handlePriorityChange = (id, imp) => {
-        var index = props.todosList.map(function (x) { return x.id; }).indexOf(id);
-        const features = [...props.todosList];
-        features[index].priority = imp;
-        props.setTodosList([...features]);
+        if (imp >= 1 && imp <= 10) {
+            var index = props.todosList.map(function (x) { return x.id; }).indexOf(id);
+            const features = [...props.todosList];
+            features[index].priority = imp;
+            props.setTodosList([...features]);
+        }
     }
 
     const moveToTopHandler = (id) => {
